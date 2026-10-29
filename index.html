@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinayak | Computer Science &amp; AI</title>
+  <meta name="description" content="Explore Vinayak's portfolio, software development experience, projects, and interests in Computer Science and Artificial Intelligence.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#090a0f">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vinayak | Computer Science &amp; AI">
+  <meta property="og:description" content="Explore Vinayak's portfolio, software development experience, projects, and interests in Computer Science and Artificial Intelligence.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js from CDN (Loaded with defer for non-blocking render) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Main Script -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Atmospheric background lights and grid -->
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand" aria-label="Vinayak Portfolio Home">
+        <span class="brand-monogram">V</span>
+        <span class="brand-text">
+          <span class="brand-name">Vinayak</span>
+          <span class="brand-sub">CS &amp; AI</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button type="button" class="btn btn-outline btn-sm resume-btn" id="nav-resume-btn" aria-label="Open Resume Document">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="mobile-backdrop" id="mobile-backdrop" aria-hidden="true"></div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-badge-group">
+            <span class="eyebrow-pill">COMPUTER SCIENCE &times; ARTIFICIAL INTELLIGENCE</span>
+            <div class="status-badge" role="status">
+              <span class="status-pulse" aria-hidden="true"></span>
+              <span class="status-text">OPEN TO INTERNSHIP OPPORTUNITIES</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title" id="hero-heading">
+            Think deeply.<br>
+            <span class="gradient-text">Build thoughtfully.</span>
+          </h1>
+
+          <p class="hero-description">
+            I'm <strong>Vinayak</strong> &mdash; a creative thinker, enthusiastic learner, and Computer Science &amp; AI student exploring ideas through technology.
+          </p>
+
+          <p class="hero-subtext">
+            <svg class="icon-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Software development experience at IIT Mandi.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Let's Connect</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero 3D Visual Centerpiece -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-wrapper" id="visual-wrapper">
+            <!-- 3D Three.js Canvas Container -->
+            <canvas id="hero-canvas" class="hero-canvas"></canvas>
+
+            <!-- Resilient CSS & SVG Geometric Fallback (Active when WebGL is unavailable or loading) -->
+            <div class="canvas-fallback" id="canvas-fallback">
+              <div class="orbit-center">
+                <div class="nucleus"></div>
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+                <div class="particle p1"></div>
+                <div class="particle p2"></div>
+                <div class="particle p3"></div>
+              </div>
+            </div>
+
+            <!-- Geometric Canvas Badge -->
+            <div class="visual-tag">
+              <span class="tag-dot"></span>
+              <span class="tag-label">INTERACTIVE 3D CORE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span class="scroll-label">Scroll to explore</span>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-label">GET TO KNOW ME</span>
+          <h2 class="section-title" id="about-heading">Curiosity is where everything starts.</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Narrative & Philosophy -->
+          <div class="about-narrative reveal-on-scroll">
+            <div class="narrative-card">
+              <p class="lead-text">
+                I'm <strong>Vinayak</strong>, a first-year Computer Science and Artificial Intelligence student at <strong>Rishihood University</strong>. I'm a creative thinker, an enthusiastic learner, and someone who enjoys understanding problems before working toward thoughtful solutions.
+              </p>
+              <p class="body-text">
+                My experience includes two months of software development work at <strong>IIT Mandi</strong>. I'm continuing to explore technology, develop my skills, and build projects that turn ideas into practical solutions.
+              </p>
+            </div>
+
+            <!-- Problem-Solving Approach Card -->
+            <div class="approach-box">
+              <div class="approach-header">
+                <div class="approach-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 16v-4"></path>
+                    <path d="M12 8h.01"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="approach-title">First-Principles Problem Solving</h3>
+                  <span class="approach-subtitle">Understand thoroughly &rarr; Build deliberately</span>
+                </div>
+              </div>
+              <p class="approach-text">
+                I prefer to pause, break down a problem into its fundamental parts, evaluate possible solutions, and then build with clarity and precision.
+              </p>
+              <div class="approach-steps">
+                <span class="step-chip"><span class="chip-num">1</span> Pause &amp; Dissect</span>
+                <span class="step-arrow">&rarr;</span>
+                <span class="step-chip"><span class="chip-num">2</span> Formulate Strategy</span>
+                <span class="step-arrow">&rarr;</span>
+                <span class="step-chip"><span class="chip-num">3</span> Build &amp; Refine</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Abstract Visual & Quick Info Panel -->
+          <div class="about-sidebar reveal-on-scroll">
+            <div class="abstract-graphic-card">
+              <img src="assets/images/neural-abstract.svg" alt="Abstract geometric visualization of cognitive curiosity, first-principles problem analysis, and software engineering" class="abstract-img" loading="lazy">
+              <div class="graphic-caption">
+                <span class="mono-badge">THOUGHT_MATRIX_V1</span>
+                <span class="mono-sub">Curiosity &bull; Analysis &bull; Creation</span>
+              </div>
+            </div>
+
+            <div class="info-specs-card">
+              <h3 class="specs-title">Snapshot</h3>
+              <ul class="specs-list">
+                <li class="spec-item">
+                  <span class="spec-label">Academic Base</span>
+                  <span class="spec-value">Rishihood University</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">Program</span>
+                  <span class="spec-value">B.Tech in CS &amp; AI (1st Year)</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">Development Exposure</span>
+                  <span class="spec-value">IIT Mandi (2 Months)</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">Location</span>
+                  <span class="spec-value">Sonipat, Haryana, India</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-label">Core Foundation</span>
+                  <span class="spec-value highlight-athlete">Student &amp; Athlete</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-label">COMPETENCIES &amp; INTERESTS</span>
+          <h2 class="section-title" id="skills-heading">Tools I use. Ideas I explore.</h2>
+          <p class="section-subtitle">
+            An honest overview of my programming foundation, AI workflows, cognitive strengths, and athletic discipline.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- 1. Programming -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box cyan-glow">
+                <img src="assets/icons/python.svg" alt="Python programming language icon" class="cat-svg">
+              </div>
+              <div>
+                <span class="category-label">CORE FOUNDATION</span>
+                <h3 class="category-title">Programming</h3>
+              </div>
+            </div>
+            <p class="category-desc">
+              My primary language of exploration for algorithmic logic, computational problem-solving, and AI experimentation.
+            </p>
+            <div class="skill-items">
+              <div class="skill-pill active-pill">
+                <span class="pill-dot"></span>
+                <span class="pill-name">Python</span>
+                <span class="pill-tag">Language of Focus</span>
+              </div>
+            </div>
+            <div class="skill-footer-note">
+              <span>Algorithmic foundations &amp; functional experimentation</span>
+            </div>
+          </div>
+
+          <!-- 2. AI Tools -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box purple-glow">
+                <img src="assets/icons/ai.svg" alt="Artificial intelligence and neural systems icon" class="cat-svg">
+              </div>
+              <div>
+                <span class="category-label">INTELLIGENT SYSTEMS</span>
+                <h3 class="category-title">AI Tools</h3>
+              </div>
+            </div>
+            <p class="category-desc">
+              Harnessing modern large language models for iterative learning, architectural brainstorming, and research synthesis.
+            </p>
+            <div class="skill-items">
+              <div class="skill-pill">
+                <span class="pill-dot"></span>
+                <span class="pill-name">ChatGPT</span>
+                <span class="pill-tag">Ideation &amp; Logic</span>
+              </div>
+              <div class="skill-pill">
+                <span class="pill-dot"></span>
+                <span class="pill-name">Claude</span>
+                <span class="pill-tag">Reasoning &amp; Synthesis</span>
+              </div>
+            </div>
+            <div class="skill-footer-note">
+              <span>Applied as cognitive leverage for technical discovery</span>
+            </div>
+          </div>
+
+          <!-- 3. Core Strengths -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box teal-glow">
+                <img src="assets/icons/brain.svg" alt="Cognitive strengths and creative problem-solving icon" class="cat-svg">
+              </div>
+              <div>
+                <span class="category-label">MINDSET &amp; APPROACH</span>
+                <h3 class="category-title">Core Strengths</h3>
+              </div>
+            </div>
+            <p class="category-desc">
+              The internal principles and cognitive habits that guide how I tackle challenges and build solutions.
+            </p>
+            <div class="strength-list">
+              <div class="strength-item">
+                <div class="strength-bullet"></div>
+                <div class="strength-info">
+                  <strong>Creative Thinking</strong>
+                  <span>Approaching unfamiliar problems from multiple angles to uncover thoughtful paths.</span>
+                </div>
+              </div>
+              <div class="strength-item">
+                <div class="strength-bullet"></div>
+                <div class="strength-info">
+                  <strong>Problem-Solving</strong>
+                  <span>Breaking down ambiguous questions into structured, solvable components.</span>
+                </div>
+              </div>
+              <div class="strength-item">
+                <div class="strength-bullet"></div>
+                <div class="strength-info">
+                  <strong>Learning &amp; Experimentation</strong>
+                  <span>Curious, enthusiastic, and constantly testing new concepts by writing code.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Personal Interests -->
+          <div class="skill-category-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box amber-glow">
+                <img src="assets/icons/athletics.svg" alt="Athletic discipline and endurance icon" class="cat-svg">
+              </div>
+              <div>
+                <span class="category-label">DISCIPLINE &amp; GRIT</span>
+                <h3 class="category-title">Personal Interests</h3>
+              </div>
+            </div>
+            <p class="category-desc">
+              Physical discipline reinforces mental focus, perseverance under pressure, and long-term consistency.
+            </p>
+            <div class="skill-items">
+              <div class="skill-pill highlight-gold">
+                <span class="pill-dot"></span>
+                <span class="pill-name">Athletics</span>
+                <span class="pill-tag">Focus &amp; Resilience</span>
+              </div>
+            </div>
+            <div class="interest-quote">
+              <p>&ldquo;Training as an athlete builds endurance, consistency, and the mental composure required to tackle demanding technical problems.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-label">SELECTED WORK</span>
+          <h2 class="section-title" id="projects-heading">Ideas, explored through code.</h2>
+          <p class="section-subtitle">
+            Featured exploration combining structured systems, compiler concepts, and artificial intelligence.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Featured Project Presentation -->
+        <div class="featured-project-container reveal-on-scroll">
+          <article class="featured-project-card" id="clinical-project-card">
+            <!-- Project Visual Container -->
+            <div class="project-media">
+              <div class="media-frame">
+                <img src="assets/images/clinical-system.svg" alt="Abstract architectural schematic for the Clinical Appointment Assessment System" class="project-img" loading="lazy">
+                <div class="media-badge">
+                  <span class="status-indicator-dot"></span>
+                  <span>IN ACTIVE RESEARCH &amp; DESIGN</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Meta & Details -->
+            <div class="project-details">
+              <div class="project-eyebrow">
+                <span class="badge-accent">FEATURED EXPLORATION</span>
+                <span class="badge-domain">HEALTHCARE WORKFLOWS</span>
+              </div>
+
+              <h3 class="project-title">Clinical Appointment Assessment System</h3>
+
+              <p class="project-summary">
+                A system designed to help hospital or clinic staff book and manage appointments and summarize relevant appointment details with intelligent structure.
+              </p>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">
+                  <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                  AI Integration
+                </span>
+                <span class="tech-tag">
+                  <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  Compiler-Related Technologies
+                </span>
+                <span class="tech-tag">
+                  <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  Appointment Management
+                </span>
+              </div>
+
+              <div class="project-highlights">
+                <div class="highlight-point">
+                  <span class="point-icon">&check;</span>
+                  <span>Intelligent booking flow to reduce clinical scheduling friction</span>
+                </div>
+                <div class="highlight-point">
+                  <span class="point-icon">&check;</span>
+                  <span>Structured summarization of appointment notes and patient context</span>
+                </div>
+                <div class="highlight-point">
+                  <span class="point-icon">&check;</span>
+                  <span>Exploring compiler and parsing techniques to organize unstructured clinical inputs</span>
+                </div>
+              </div>
+
+              <!-- Action triggers Project Modal -->
+              <div class="project-actions">
+                <button type="button" class="btn btn-primary" id="open-project-modal-btn">
+                  <span>View Project Breakdown</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Future Projects Roadmap Note -->
+        <div class="projects-note reveal-on-scroll">
+          <div class="note-inner">
+            <div class="note-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+            </div>
+            <div class="note-content">
+              <h4>Extensible Engineering Pipeline</h4>
+              <p>
+                Currently focusing on deep algorithmic problem-solving in Python and exploring real-world applications of machine learning. New project repositories will be linked as they reach production milestones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience-section" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-label">PRACTICAL EXPERIENCE</span>
+          <h2 class="section-title" id="experience-heading">Where I've been learning.</h2>
+          <p class="section-subtitle">
+            Hands-on immersion in collaborative engineering environments.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- Timeline Entry: IIT Mandi -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="org-brand">
+                  <div class="org-icon">
+                    <img src="assets/icons/iit.svg" alt="IIT Mandi research institution emblem" class="cat-svg">
+                  </div>
+                  <div>
+                    <h3 class="role-title">Software Development Experience</h3>
+                    <h4 class="org-title">IIT Mandi <span class="org-full">(Indian Institute of Technology Mandi)</span></h4>
+                  </div>
+                </div>
+                <div class="duration-badge">
+                  <svg class="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>2 Months</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <p>
+                  Engaged in two months of software development work at IIT Mandi. Gained valuable exposure to professional software engineering practices, working with codebases, understanding technical requirements, and collaborating in an intensive academic and research environment.
+                </p>
+              </div>
+
+              <div class="timeline-tags">
+                <span class="timeline-tag">Software Development</span>
+                <span class="timeline-tag">Technical Exploration</span>
+                <span class="timeline-tag">IIT Mandi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education and Achievements Section -->
+    <section class="section education-section" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-label">ACADEMIC &amp; COMMUNITY MILESTONES</span>
+          <h2 class="section-title" id="education-heading">Education &amp; Achievements</h2>
+          <p class="section-subtitle">
+            Academic foundation, collaborative hackathons, and wellness leadership.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="milestones-grid">
+          <!-- Education Card -->
+          <div class="milestone-card primary-milestone reveal-on-scroll">
+            <div class="milestone-icon-wrap cyan-glow">
+              <img src="assets/icons/university.svg" alt="Rishihood University graduation emblem" class="cat-svg">
+            </div>
+            <span class="milestone-type">DEGREE PROGRAM</span>
+            <h3 class="milestone-title">Rishihood University</h3>
+            <p class="milestone-degree">B.Tech in Computer Science &amp; Artificial Intelligence</p>
+            <div class="milestone-meta">
+              <span class="meta-pill">First Year</span>
+              <span class="meta-pill">Sonipat, Haryana</span>
+            </div>
+            <p class="milestone-desc">
+              Focusing on core computer science foundations, computational thinking, algorithms, and artificial intelligence fundamentals.
+            </p>
+          </div>
+
+          <!-- Hackathons Card -->
+          <div class="milestone-card reveal-on-scroll">
+            <div class="milestone-icon-wrap purple-glow">
+              <img src="assets/icons/hackathon.svg" alt="Hackathon coding sprint and rapid prototyping icon" class="cat-svg">
+            </div>
+            <span class="milestone-type">COLLABORATIVE CODING</span>
+            <h3 class="milestone-title">Hackathon Participation</h3>
+            <p class="milestone-degree">2 Hackathons</p>
+            <div class="milestone-meta">
+              <span class="meta-pill">Team Collaboration</span>
+              <span class="meta-pill">Rapid Prototyping</span>
+            </div>
+            <p class="milestone-desc">
+              Participated in two hackathons, collaborating under tight timelines to dissect problems, ideate creative solutions, and build working prototypes alongside peers.
+            </p>
+          </div>
+
+          <!-- College Club: Sannidhyam -->
+          <div class="milestone-card reveal-on-scroll">
+            <div class="milestone-icon-wrap teal-glow">
+              <img src="assets/icons/wellness.svg" alt="Sannidhyam mental wellness club icon" class="cat-svg">
+            </div>
+            <span class="milestone-type">CAMPUS ENGAGEMENT</span>
+            <h3 class="milestone-title">Sannidhyam</h3>
+            <p class="milestone-degree">Mental Wellness Club</p>
+            <div class="milestone-meta">
+              <span class="meta-pill">Wellbeing</span>
+              <span class="meta-pill">Community Support</span>
+            </div>
+            <p class="milestone-desc">
+              Active involvement in promoting mental wellness, creating empathetic spaces for peer dialogue, and building balanced, supportive student communities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-label">GET IN TOUCH</span>
+          <h2 class="section-title" id="contact-heading">Have an interesting problem in mind?</h2>
+          <p class="section-subtitle">
+            I'm always interested in learning, exploring new ideas, and connecting with people who enjoy building meaningful things.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Channels & Verified Socials -->
+          <div class="contact-info-col reveal-on-scroll">
+            <div class="contact-card">
+              <h3 class="contact-card-title">Connect Directly</h3>
+              <p class="contact-card-text">
+                Whether you're exploring internship candidates, looking to collaborate on an AI project, or want to discuss creative software development, my inbox and messages are open.
+              </p>
+
+              <div class="channels-list">
+                <!-- Instagram (Exact URL provided) -->
+                <a href="https://www.instagram.com/vinayak_k31/" target="_blank" rel="noopener noreferrer" class="channel-item" aria-label="Visit Vinayak's Instagram profile (opens in new tab)">
+                  <div class="channel-icon instagram-icon">
+                    <img src="assets/icons/instagram.svg" alt="Instagram logo" class="cat-svg">
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-label">Instagram</span>
+                    <span class="channel-value">@vinayak_k31</span>
+                  </div>
+                  <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+
+                <!-- Email Channel (Controlled via script.js CONFIG) -->
+                <div class="channel-item" id="email-channel-card">
+                  <div class="channel-icon mail-icon">
+                    <img src="assets/icons/mail.svg" alt="Direct email inbox icon" class="cat-svg">
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-label">Email</span>
+                    <span class="channel-value" id="display-email-text">Direct email via inquiry form</span>
+                  </div>
+                  <button type="button" class="btn-copy" id="copy-email-btn" title="Copy email address" aria-label="Copy email address">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- GitHub Channel (Configurable via script.js CONFIG) -->
+                <a target="_blank" rel="noopener noreferrer" class="channel-item hidden-channel" id="github-channel-link" aria-label="Visit Vinayak's GitHub profile">
+                  <div class="channel-icon github-icon">
+                    <img src="assets/icons/github.svg" alt="GitHub icon" class="cat-svg">
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-label">GitHub</span>
+                    <span class="channel-value" id="display-github-text">View Repositories</span>
+                  </div>
+                  <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+
+                <!-- LinkedIn Channel (Configurable via script.js CONFIG) -->
+                <a target="_blank" rel="noopener noreferrer" class="channel-item hidden-channel" id="linkedin-channel-link" aria-label="Visit Vinayak's LinkedIn profile">
+                  <div class="channel-icon linkedin-icon">
+                    <img src="assets/icons/linkedin.svg" alt="LinkedIn icon" class="cat-svg">
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-label">LinkedIn</span>
+                    <span class="channel-value" id="display-linkedin-text">Professional Network</span>
+                  </div>
+                  <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Location & Response Note -->
+              <div class="location-badge">
+                <svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Based in Sonipat, Haryana, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Inquiry Composer -->
+          <div class="contact-form-col reveal-on-scroll">
+            <div class="form-container-card">
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-subtitle">
+                Fill out the note below to open a pre-formatted message or trigger direct outreach.
+              </p>
+
+              <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="sender-name" class="form-label">Your Name <span class="required">*</span></label>
+                  <input type="text" id="sender-name" name="name" class="form-input" placeholder="e.g. Maya Sharma" required autocomplete="name">
+                  <span class="form-error" id="name-error" role="alert">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="sender-email" class="form-label">Your Email <span class="required">*</span></label>
+                  <input type="email" id="sender-email" name="email" class="form-input" placeholder="e.g. maya@example.com" required autocomplete="email">
+                  <span class="form-error" id="email-error" role="alert">Please provide a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message-subject" class="form-label">Subject <span class="required">*</span></label>
+                  <input type="text" id="message-subject" name="subject" class="form-input" placeholder="Internship Opportunity / Project Collaboration" required>
+                  <span class="form-error" id="subject-error" role="alert">Please provide a subject.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message-body" class="form-label">Message <span class="required">*</span></label>
+                  <textarea id="message-body" name="message" class="form-textarea" rows="5" placeholder="Share details about your idea, team, or opportunity..." required></textarea>
+                  <span class="form-error" id="message-error" role="alert">Please enter your message.</span>
+                </div>
+
+                <!-- Live Status / Result Message -->
+                <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                  <span>Draft &amp; Send Message</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="brand" aria-label="Vinayak Portfolio Home">
+          <span class="brand-monogram">V</span>
+          <span class="brand-name">Portfolio by Vinayak</span>
+        </a>
+        <p class="footer-tagline">
+          Computer Science &amp; Artificial Intelligence &bull; Rishihood University
+        </p>
+      </div>
+
+      <div class="footer-meta">
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> Vinayak. Built with clean, thoughtful web engineering.
+        </p>
+        <div class="footer-links">
+          <a href="#hero" class="footer-link">Back to Top &uarr;</a>
+          <button type="button" class="footer-link resume-btn" id="footer-resume-btn">Resume</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal Dialog -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow">SYSTEM ARCHITECTURE BREAKDOWN</span>
+          <h3 class="modal-title" id="modal-project-title">Clinical Appointment Assessment System</h3>
+        </div>
+        <button type="button" class="modal-close" id="close-project-modal-btn" aria-label="Close project details dialog">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-schematic-wrap">
+          <img src="assets/images/clinical-system.svg" alt="Detailed schematic diagram of Clinical Appointment Assessment System" class="modal-schematic-img">
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-subheading">Core Vision &amp; Problem Statement</h4>
+          <p>
+            In active outpatient clinics and hospital wards, healthcare personnel spend extensive time juggling appointment schedules and deciphering unstructured consultation logs. The <strong>Clinical Appointment Assessment System</strong> aims to bridge this gap by uniting intelligent intake scheduling with automated appointment summarization.
+          </p>
+        </div>
+
+        <div class="modal-grid-two">
+          <div class="modal-feature-box">
+            <h5>1. Scheduling &amp; Slot Management</h5>
+            <p>
+              Provides staff with an intuitive interface to log, reschedule, and prioritize patient appointments based on urgency and clinical resource availability.
+            </p>
+          </div>
+          <div class="modal-feature-box">
+            <h5>2. Compiler &amp; Parsing Concepts</h5>
+            <p>
+              Explores lexical and syntactic parsing techniques to tokenize unstructured clinical notes, validate formatting, and standardize medical appointment terms.
+            </p>
+          </div>
+          <div class="modal-feature-box">
+            <h5>3. AI-Driven Summarization</h5>
+            <p>
+              Leverages language processing techniques to synthesize lengthy consultation details into concise, clinically actionable briefs for doctors.
+            </p>
+          </div>
+          <div class="modal-feature-box">
+            <h5>4. Development Status</h5>
+            <p>
+              Currently in exploratory research and architecture modeling. Implementation details and tech stack are actively being refined.
+            </p>
+          </div>
+        </div>
+
+        <div class="modal-footer-note">
+          <p>
+            <em>Note: The repository link and live demonstration will be connected once the core implementation milestones are published.</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modal-dismiss-btn">Close Breakdown</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Dialog / Notification Modal -->
+  <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="modal-resume-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-sm">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow">DOCUMENT ACCESS</span>
+          <h3 class="modal-title" id="modal-resume-title">Vinayak's Resume</h3>
+        </div>
+        <button type="button" class="modal-close" id="close-resume-modal-btn" aria-label="Close resume dialog">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-modal-content" id="resume-modal-status">
+          <div class="resume-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h4 id="resume-dialog-heading">Resume on Request</h4>
+          <p id="resume-dialog-desc">
+            Vinayak is currently curating his updated first-year academic resume for upcoming summer and academic internship cycles.
+          </p>
+          <div class="resume-instruction-box">
+            <p>
+              To request a copy directly or receive an updated PDF, reach out via Instagram at <strong>@vinayak_k31</strong> or submit an inquiry through the contact form below.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#contact" class="btn btn-primary" id="resume-to-contact-btn">Contact Vinayak</a>
+        <button type="button" class="btn btn-secondary" id="resume-dismiss-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-hidden="true">
+    <span class="toast-message" id="toast-message">Notification</span>
+  </div>
+</body>
+</html>

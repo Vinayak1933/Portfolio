@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <defs>
+    <radialGradient id="about-center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orbit-grad" x1="0" y1="0" x2="500" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="0.5" stop-color="#818cf8" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient background glow -->
+  <circle cx="250" cy="250" r="220" fill="url(#about-center-glow)"/>
+
+  <!-- Concentric Orbital & Coordinate Rings -->
+  <circle cx="250" cy="250" r="210" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+  <circle cx="250" cy="250" r="170" stroke="url(#orbit-grad)" stroke-width="1" stroke-dasharray="6 8"/>
+  <circle cx="250" cy="250" r="130" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.2"/>
+  <circle cx="250" cy="250" r="85" stroke="rgba(129, 140, 248, 0.4)" stroke-width="1.5" stroke-dasharray="3 5"/>
+  <circle cx="250" cy="250" r="45" fill="rgba(56, 189, 248, 0.08)" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- Central Core / Nexus -->
+  <circle cx="250" cy="250" r="14" fill="#38bdf8"/>
+  <circle cx="250" cy="250" r="6" fill="#ffffff"/>
+
+  <!-- Conceptual Axes -->
+  <line x1="40" y1="250" x2="460" y2="250" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+  <line x1="250" y1="40" x2="250" y2="460" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+  <line x1="100" y1="100" x2="400" y2="400" stroke="rgba(56, 189, 248, 0.08)" stroke-width="1" stroke-dasharray="2 4"/>
+  <line x1="100" y1="400" x2="400" y2="100" stroke="rgba(129, 140, 248, 0.08)" stroke-width="1" stroke-dasharray="2 4"/>
+
+  <!-- Mathematical Geometry Polyhedra -->
+  <polygon points="250,120 360,195 320,320 180,320 140,195" fill="none" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1.2"/>
+  <polygon points="250,165 315,210 290,285 210,285 185,210" fill="none" stroke="rgba(45, 212, 191, 0.25)" stroke-width="1"/>
+
+  <!-- Cognitive Nodes & Data Points -->
+  <g id="nodes">
+    <!-- Curiosity Node -->
+    <circle cx="250" cy="120" r="5" fill="#38bdf8"/>
+    <circle cx="250" cy="120" r="9" stroke="#38bdf8" stroke-opacity="0.4"/>
+    <text x="250" y="105" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">CURIOSITY</text>
+
+    <!-- First Principles Node -->
+    <circle cx="360" cy="195" r="5" fill="#818cf8"/>
+    <circle cx="360" cy="195" r="9" stroke="#818cf8" stroke-opacity="0.4"/>
+    <text x="375" y="200" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">UNDERSTAND</text>
+
+    <!-- Analytical Synthesis Node -->
+    <circle cx="320" cy="320" r="5" fill="#2dd4bf"/>
+    <circle cx="320" cy="320" r="9" stroke="#2dd4bf" stroke-opacity="0.4"/>
+    <text x="330" y="340" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">THINK</text>
+
+    <!-- Build / Engineering Node -->
+    <circle cx="180" cy="320" r="5" fill="#38bdf8"/>
+    <circle cx="180" cy="320" r="9" stroke="#38bdf8" stroke-opacity="0.4"/>
+    <text x="170" y="340" text-anchor="end" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">BUILD</text>
+
+    <!-- Discipline Node -->
+    <circle cx="140" cy="195" r="5" fill="#a78bfa"/>
+    <circle cx="140" cy="195" r="9" stroke="#a78bfa" stroke-opacity="0.4"/>
+    <text x="125" y="200" text-anchor="end" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">DISCIPLINE</text>
+  </g>
+
+  <!-- Dynamic Orbiting Markers -->
+  <circle cx="395" cy="250" r="3" fill="#38bdf8"/>
+  <circle cx="250" cy="380" r="3" fill="#2dd4bf"/>
+  <circle cx="145" cy="355" r="2.5" fill="#818cf8"/>
+  <circle cx="340" cy="135" r="2.5" fill="#38bdf8"/>
+</svg>
+

@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" fill="none">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0c101a"/>
+      <stop offset="1" stop-color="#07090e"/>
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="teal-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="480" rx="16" fill="url(#bg-grad)"/>
+  <rect width="800" height="480" rx="16" fill="url(#grid)"/>
+  <rect x="1" y="1" width="798" height="478" rx="15" stroke="rgba(56, 189, 248, 0.15)" stroke-width="1"/>
+
+  <!-- Top System Bar -->
+  <g transform="translate(32, 28)">
+    <circle cx="8" cy="8" r="4" fill="#ef4444" opacity="0.6"/>
+    <circle cx="24" cy="8" r="4" fill="#f59e0b" opacity="0.6"/>
+    <circle cx="40" cy="8" r="4" fill="#10b981" opacity="0.6"/>
+    <text x="64" y="12" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1.5">CLINICAL_APPOINTMENT_ASSESSMENT_SYSTEM // ARCHITECTURAL SCHEMATIC</text>
+    <rect x="640" y="0" width="96" height="18" rx="9" fill="rgba(45, 212, 191, 0.1)" stroke="rgba(45, 212, 191, 0.3)"/>
+    <text x="655" y="12" fill="#2dd4bf" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">SYSTEM: ACTIVE</text>
+  </g>
+
+  <!-- Module 1: Patient Intake & Scheduling Stream -->
+  <g transform="translate(48, 80)">
+    <rect width="210" height="340" rx="12" fill="#111624" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1"/>
+    <text x="20" y="32" fill="#f8fafc" font-family="'Inter', sans-serif" font-weight="600" font-size="13">1. INTAKE & TRIAGE</text>
+    <text x="20" y="48" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">MODULE: SCHEDULING</text>
+
+    <!-- Slot list -->
+    <g transform="translate(16, 70)">
+      <rect width="178" height="46" rx="8" fill="#171e30" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1"/>
+      <circle cx="16" cy="23" r="5" fill="#38bdf8"/>
+      <text x="32" y="20" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Slot #0849 — General</text>
+      <text x="32" y="34" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Status: Pending Assessment</text>
+    </g>
+
+    <g transform="translate(16, 126)">
+      <rect width="178" height="46" rx="8" fill="#141a29" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <circle cx="16" cy="23" r="5" fill="#818cf8"/>
+      <text x="32" y="20" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Slot #0850 — Follow-up</text>
+      <text x="32" y="34" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">Status: In Queue</text>
+    </g>
+
+    <g transform="translate(16, 182)">
+      <rect width="178" height="46" rx="8" fill="#141a29" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <circle cx="16" cy="23" r="5" fill="#2dd4bf"/>
+      <text x="32" y="20" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Slot #0851 — Diagnostic</text>
+      <text x="32" y="34" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">Status: Verified</text>
+    </g>
+
+    <!-- Mini chart telemetry -->
+    <path d="M 20 300 Q 60 270 100 290 T 180 260" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
+    <text x="20" y="325" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">APPOINTMENT DENSITY MATRIX</text>
+  </g>
+
+  <!-- Connectors between modules -->
+  <path d="M 258 170 L 295 170" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="295" cy="170" r="3" fill="#38bdf8"/>
+
+  <!-- Module 2: Central Compiler & Parsing Pipeline -->
+  <g transform="translate(295, 80)">
+    <rect width="210" height="340" rx="12" fill="#111624" stroke="rgba(129, 140, 248, 0.3)" stroke-width="1"/>
+    <text x="20" y="32" fill="#f8fafc" font-family="'Inter', sans-serif" font-weight="600" font-size="13">2. STRUCTURAL PARSER</text>
+    <text x="20" y="48" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">COMPILER-RELATED TECH</text>
+
+    <!-- AST / Tree Representation -->
+    <g transform="translate(20, 75)">
+      <!-- Root Node -->
+      <rect x="60" y="0" width="50" height="24" rx="4" fill="rgba(129, 140, 248, 0.2)" stroke="#818cf8"/>
+      <text x="73" y="16" fill="#c7d2fe" font-family="'JetBrains Mono', monospace" font-size="9">ROOT</text>
+
+      <!-- Branches -->
+      <line x1="70" y1="24" x2="30" y2="55" stroke="#818cf8" stroke-width="1.2"/>
+      <line x1="95" y1="24" x2="135" y2="55" stroke="#818cf8" stroke-width="1.2"/>
+
+      <!-- Level 1 Nodes -->
+      <rect x="10" y="55" width="45" height="22" rx="4" fill="#181f33" stroke="#818cf8"/>
+      <text x="18" y="70" fill="#a5b4fc" font-family="'JetBrains Mono', monospace" font-size="9">LEX</text>
+
+      <rect x="115" y="55" width="45" height="22" rx="4" fill="#181f33" stroke="#818cf8"/>
+      <text x="122" y="70" fill="#a5b4fc" font-family="'JetBrains Mono', monospace" font-size="9">SYN</text>
+
+      <!-- Sub branches -->
+      <line x1="32" y1="77" x2="20" y2="105" stroke="#818cf8" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="32" y1="77" x2="45" y2="105" stroke="#818cf8" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="137" y1="77" x2="125" y2="105" stroke="#818cf8" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="137" y1="77" x2="150" y2="105" stroke="#818cf8" stroke-width="1" stroke-dasharray="2 2"/>
+
+      <circle cx="20" cy="107" r="3" fill="#38bdf8"/>
+      <circle cx="45" cy="107" r="3" fill="#38bdf8"/>
+      <circle cx="125" cy="107" r="3" fill="#38bdf8"/>
+      <circle cx="150" cy="107" r="3" fill="#38bdf8"/>
+    </g>
+
+    <g transform="translate(16, 210)">
+      <rect width="178" height="105" rx="6" fill="#0c101c" stroke="rgba(255, 255, 255, 0.05)"/>
+      <text x="12" y="22" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9">&gt; TOKEN_STREAM_OK</text>
+      <text x="12" y="40" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">&gt; SYMBOLS: 14 NODES</text>
+      <text x="12" y="58" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">&gt; NORMALIZING TERMS</text>
+      <text x="12" y="76" fill="#2dd4bf" font-family="'JetBrains Mono', monospace" font-size="9">&gt; SYNTACTIC GRAPH READY</text>
+      <text x="12" y="94" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="9">&gt; READY FOR AI PASS</text>
+    </g>
+  </g>
+
+  <!-- Connectors between modules -->
+  <path d="M 505 170 L 542 170" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="542" cy="170" r="3" fill="#818cf8"/>
+
+  <!-- Module 3: AI Summarizer & Clinical Brief Engine -->
+  <g transform="translate(542, 80)">
+    <rect width="210" height="340" rx="12" fill="#111624" stroke="rgba(45, 212, 191, 0.3)" stroke-width="1"/>
+    <text x="20" y="32" fill="#f8fafc" font-family="'Inter', sans-serif" font-weight="600" font-size="13">3. AI ASSESSMENT</text>
+    <text x="20" y="48" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">SYNTHESIS & SUMMARY</text>
+
+    <!-- Abstract AI Pulse Node -->
+    <g transform="translate(105, 110)">
+      <circle cx="0" cy="0" r="32" fill="rgba(45, 212, 191, 0.05)" stroke="#2dd4bf" stroke-width="1" stroke-dasharray="4 2"/>
+      <circle cx="0" cy="0" r="20" fill="rgba(56, 189, 248, 0.1)" stroke="#38bdf8" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="8" fill="#2dd4bf"/>
+    </g>
+
+    <!-- Generated summary card -->
+    <g transform="translate(16, 175)">
+      <rect width="178" height="140" rx="8" fill="#141c2c" stroke="rgba(45, 212, 191, 0.2)" stroke-width="1"/>
+      <text x="12" y="24" fill="#2dd4bf" font-family="'Inter', sans-serif" font-weight="600" font-size="10">CLINICAL SUMMARY BRIEF</text>
+      <rect x="12" y="36" width="154" height="4" rx="2" fill="rgba(255, 255, 255, 0.2)"/>
+      <rect x="12" y="48" width="130" height="4" rx="2" fill="rgba(255, 255, 255, 0.15)"/>
+      <rect x="12" y="60" width="145" height="4" rx="2" fill="rgba(255, 255, 255, 0.15)"/>
+      <rect x="12" y="72" width="90" height="4" rx="2" fill="rgba(255, 255, 255, 0.15)"/>
+
+      <line x1="12" y1="90" x2="166" y2="90" stroke="rgba(255, 255, 255, 0.08)"/>
+      <text x="12" y="110" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">STAFF ACTION:</text>
+      <text x="12" y="125" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9">&gt; TRIAGE CONFIRMED</text>
+    </g>
+  </g>
+
+  <!-- Ambient light accents -->
+  <circle cx="150" cy="400" r="100" fill="#38bdf8" opacity="0.03" filter="blur(30px)"/>
+  <circle cx="650" cy="200" r="120" fill="#818cf8" opacity="0.04" filter="blur(40px)"/>
+</svg>
+
